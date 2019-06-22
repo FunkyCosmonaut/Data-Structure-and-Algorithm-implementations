@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void insertionsort(int *arr, int size){
 
@@ -35,6 +36,12 @@ int main(){
 	
 	printf("\nEnter how many ints you wanna sort: ");
 	scanf("%i", &arr_sz);
+	if(arr_sz < 0 || arr_sz > sizeof(int)){
+		printf("You dingus, too many elements or you entered a negative\n"
+				"quit trying to segfault my shit, exiting\n");
+		exit(0);
+	}
+
 
 	int myarray[arr_sz];
 	
