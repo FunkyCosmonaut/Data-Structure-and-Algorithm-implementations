@@ -11,7 +11,7 @@ void insertionsort(int *arr, int size){
 	for(j = 1; j != size; j++){
 		int key = arr[j];
 		i = j - 1;
-		while (i >= 0 && arr[i]>key){
+		while (i >= 0 && arr[i]<key){  //such a simple change, I reversed the > sign :U
 			arr[i + 1] = arr[i];
 			i = i -1;
 		}
